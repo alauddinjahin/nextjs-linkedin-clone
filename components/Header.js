@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 // import { useTheme } from '@emotion/react';
 import { useTheme } from "next-themes";
 import { getSession, useSession } from 'next-auth/react';
+import logoLight from "./../public/img/linkedin-3-xxl.png"
 
 //https://dev.to/andrewbaisden/the-complete-modern-react-developer-2022-3257
 
@@ -34,7 +35,7 @@ const Header = ({ logo }) => {
               {mounted && (
                   <>
                       {resolvedTheme !== "dark" ? (
-                          <Image src="https://www.iconsdb.com/icons/preview/white/linkedin-3-xl.png" width={45} height={45} />
+                          <Image src={logoLight} width={45} height={45} />
                       ) : (
                             <div className='relative h-10 w-36'>
                                 <Image src={logo} layout="fill" objectFit='contain' />
