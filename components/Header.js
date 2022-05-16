@@ -60,7 +60,7 @@ const Header = ({ logo }) => {
               <HeaderLink Icon={BusinessCenter} text="Jobs" feed hidden />
               <HeaderLink Icon={Chat} text="Messaging" feed />
               <HeaderLink Icon={Notifications} text="Notifications" feed />
-              <HeaderLink Icon={Avatar} text="Me" feed avatar hidden />
+              <HeaderLink Icon={Avatar} text="Me" feed avatar={session?.user?.image} hidden />
               <HeaderLink Icon={AppsOutlined} text="Work" feed hidden />
 
               {/* dark mode  */}
