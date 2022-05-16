@@ -66,7 +66,9 @@ export default function Home({ posts, articles }) {
 
 
 
-export async function getServerSideProps(context){
+// export async function getServerSideProps(context)
+export async function getStaticProps(context)
+{
   // Check if the user is authenticated on the server...
   const session = await getSession(context);
 
@@ -108,6 +110,7 @@ export async function getServerSideProps(context){
         createdAt: post.createdAt,
       })),
     },
+    revalidate: 10
   }
 
 }

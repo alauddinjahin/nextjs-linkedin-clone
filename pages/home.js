@@ -96,12 +96,15 @@ export default Home
 
 
 
-export async function getServerSideProps(context) {
+// export async function getServerSideProps(context) 
+export async function getStaticProps(context) 
+{
     const providers = await getProviders();
 
     return {
         props: {
             providers,
         },
+        revalidate: 10
     };
 }
